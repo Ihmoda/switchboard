@@ -6,5 +6,64 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
-}
+  switchvals;
+  color: string;
+  constructor(){
+    this.switchvals = [
+      {
+        "value": "ON",
+        "color": "green",
+      },
+      {
+        "value": "ON",
+        "color": "green",
+      },
+      {
+        "value": "ON",
+        "color": "green",
+      },
+      {
+
+        "value": "ON",
+        "color": "green",
+      }, 
+      {
+        "value": "ON",
+        "color": "green",
+      },
+      {
+        "value": "ON",
+        "color": "green",
+      },
+      {
+        "value": "ON",
+        "color": "green",
+      },
+      {
+        "value": "ON",
+        "color": "green",
+      },
+      {
+        "value": "ON",
+        "color": "green",
+      },
+      {
+        "value": "ON",
+        "color": "green",
+      }
+    ]
+  }
+
+  changeValue(num: number){
+    let value = this.switchvals[num].value;
+    if (value == "ON"){
+      this.switchvals[num].value = "OFF"
+      this.switchvals[num].color = "red"    
+    } else{
+      this.switchvals[num].value = "ON"
+      this.switchvals[num].color = "green"    
+    }
+
+    }
+
+  }
